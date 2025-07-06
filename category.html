@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Categories - Handicrafy Luxe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #333;
+    }
+
+    .header {
+      padding: 14px 16px;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .category-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 20px;
+    }
+
+    .category-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      color: #333;
+      transition: transform 0.2s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 8px;
+    }
+
+    .category-card span {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #fff;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+     .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #fff;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    .bottom-nav a {
+      text-align: center;
+      text-decoration: none;
+      font-size: 12px;
+      color: #444;
+    }
+
+    .bottom-nav i {
+      font-size: 18px;
+      display: block;
+      margin-bottom: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <a href="index.html" style="text-decoration:none; color:#333;"><i class="fas fa-arrow-left"></i></a>
+    <span>Shop by Category</span>
+    <i class="fas fa-th-large"></i>
+  </div>
+
+  <div class="category-list">
+    <a class="category-card" href="products-metal.html">
+      <img src="assets/motorcycle.jpeg" alt="Metal Art">
+      <span>Metal Art</span>
+    </a>
+    <a class="category-card" href="products-frames.html">
+      <img src="assets/wall.jpeg" alt="Frames">
+      <span>Wall Frames</span>
+    </a>
+    <a class="category-card" href="products-toy.html">
+      <img src="assets/toy.jpeg" alt="Table Decor">
+      <span>Table Decor</span>
+    </a>
+    <a class="category-card" href="products-spritual.html">
+      <img src="assets/ganesh.jpeg" alt="Spiritual">
+      <span>Spiritual</span>
+    </a>
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="index.html"><i class="fas fa-home"></i>Home</a>
+    <a href="category.html"><i class="fas fa-th-large"></i>Category</a>
+    <a href="orders.html"><i class="fas fa-box"></i>Orders</a>
+    <a href="profile.html"><i class="fas fa-user"></i>Profile</a>
+  </nav>
+
+</body>
+</html>

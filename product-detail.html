@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wall Frame Art - Handicrafy Luxe</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .rating {
+      color: gold;
+      margin: 8px 0;
+    }
+    .action-buttons button {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    .buy-now {
+      background-color: #28a745;
+      color: white;
+    }
+    .add-cart {
+      background-color: var(--primary);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+  <div class="logo">Handpainted Ganesh</div>
+  <div class="cart">
+    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+    <span class="cart-count" id="cartCount">1</span>
+  </div>
+</header>
+
+<div class="page" style="padding: 16px;">
+  <!-- Product Info -->
+  <div class="product-card">
+    <img src="assets/product_4.jpg" alt="Elegant Wall Frame" style="width:100%; height:220px; object-fit:cover; border-radius:12px;">
+    <div style="padding: 10px;">
+      <h2>Handpainted Ganesh </h2>
+      <p class="price"><b>₹699</b></p>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+        <span style="font-size: 13px; color: #777;">(82 reviews)</span>
+      </div>
+      <p style="font-size: 14px; line-height: 1.6; margin-top: 10px;">
+ Bring peace and positivity to your home with this beautifully handpainted Ganesh artwork. Ideal for pooja rooms or as a divine decor piece for living spaces. 
+        Crafted with spiritual intent and artistic finesse, it makes a meaningful gift during festive seasons.
+      <div class="action-buttons" style="margin-top: 20px;">
+        <button class="buy-now" onclick="buyNow()">Buy Now</button>
+        <button class="add-cart" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bottom-nav">
+  <a href="index.html"><i class="fas fa-home"></i>Home</a>
+  <a href="orders.html"><i class="fas fa-box"></i>Orders</a>
+  <a href="profile.html"><i class="fas fa-user"></i>Profile</a>
+</footer>
+
+<script>
+  function addToCart() {
+    alert("Product added to cart!");
+    // TODO: Add to localStorage or backend cart logic
+  }
+  function buyNow() {
+    alert("Proceeding to Buy Now!");
+    // TODO: Add direct checkout navigation
+  }
+</script>
+
+
+
+</body>
+</html>

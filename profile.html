@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile - Handicrafy Luxe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #111;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      border-bottom: 1px solid #eee;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .cart-icon {
+      position: relative;
+    }
+    .cart-icon i {
+      font-size: 18px;
+    }
+    .cart-count {
+      position: absolute;
+      top: -6px;
+      right: -10px;
+      background: red;
+      color: white;
+      font-size: 10px;
+      padding: 2px 5px;
+      border-radius: 50%;
+    }
+    .profile-options {
+      padding: 20px 16px;
+    }
+    .profile-options div {
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 16px;
+    }
+    .profile-options i {
+      margin-right: 10px;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #fff;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+    .bottom-nav a {
+      text-align: center;
+      text-decoration: none;
+      font-size: 12px;
+      color: #000;
+    }
+    .bottom-nav i {
+      font-size: 18px;
+      display: block;
+      margin-bottom: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <i class="fas fa-search"></i>
+  <div class="logo">HANDICRAFY</div>
+  <div class="cart-icon">
+    <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+    <span class="cart-count">0</span>
+  </div>
+</header>
+
+<div class="profile-options">
+ <a href="login.html" style="text-decoration: none; color: inherit;">
+  <div><i class="fas fa-user"></i>Login</div>
+</a>
+
+<a href="aboutus.html" style="text-decoration: none; color: inherit;">
+  <div><i class="fas fa-info-circle"></i> About Us</div>
+</a>
+
+<a href="privacy.html" style="text-decoration: none; color: inherit;">
+  <div><i class="fas fa-info-circle"></i> Privacy Policy</div>
+</a>
+  <div>Return Policy</div>
+  <div>Shipping Policy</div>
+  <div>Terms & Condition</div>
+  <div>Contact Us</div>
+</div>
+
+<footer class="bottom-nav">
+  <a href="index.html"><i class="fas fa-home"></i>Home</a>
+  <a href="orders.html"><i class="fas fa-box"></i>Order</a>
+  <a href="profile.html"><i class="fas fa-user-circle"></i>Profile</a>
+ 
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Handicrafy Luxe</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Handicrafy Luxe</div>
+    <div class="cart">
+  <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+  <span class="cart-count" id="cartCount">0</span>
+</div>
+
+  </header>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search products..." id="searchInput">
+  </div>
+
+   <!-- HOME PAGE -->
+  <!-- BANNER SECTION -->
+<div style="margin-top: 16px;">
+  <iframe src="banner.html" style="border: none; width: 100%; height: 220px; border-radius: 12px; overflow: hidden;"></iframe>
+</div>
+
+  <div class="page">
+    <h2 class="section-title">Shop by Category</h2>
+    <div class="category-scroll">
+      <a href="products-metal.html" class="category">
+        <img src="assets/motorcycle.jpeg">
+        <span>Metal Art</span>
+      </a>
+      <a href="products-frames.html" class="category">
+        <img src="assets/wall.jpeg">
+        <span>Wall Frames</span>
+      </a>
+      <a href="products-toy.html" class="category">
+        <img src="assets/toy.jpeg">
+        <span>Decor Toys</span>
+      </a>
+      <a href="products-spritual.html" class="category">
+        <img src="assets/ganesh.jpeg">
+        <span>Spiritual</span>
+      </a>
+    </div>
+
+    <h2 class="section-title">Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <a href="product-detail.html">
+          <img src="assets/product_4.jpg" alt="Handpainted Ganesh">
+          <div>
+            <h4>Handpainted Ganesh</h4>
+            <p class="price">₹499</p>
+          </div>
+        </a>
+      </div>
+      <div class="product-card">
+        <a href="products-combo.html">
+          <img src="assets/product_1.png" alt="Decor Krishna">
+          <div>
+            <h4>Combo Set</h4>
+            <p class="price">₹599</p>
+          </div>
+        </a>
+      </div>
+      <div class="product-card">
+        <a href="products-peacock.html">
+          <img src="assets/product_5.jpg" alt="Decor Krishna">
+          <div>
+            <h4>Peacock Painting</h4>
+            <p class="price">₹899</p>
+          </div>
+        </a>
+      </div>
+      <div class="product-card">
+        <a href="products-paper.html">
+          <img src="assets/product_10.jpg" alt="Decor Krishna">
+          <div>
+            <h4>Handmade Paper</h4>
+            <p class="price">₹699</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bottom-nav">
+    <a href="index.html"><i class="fas fa-home"></i>Home</a>
+    <a href="orders.html"><i class="fas fa-box"></i>Orders</a>
+    <a href="profile.html"><i class="fas fa-user"></i>Profile</a>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  let index = 0;
+  const banner = document.getElementById('bannerSlide');
+  const dots = document.querySelectorAll('.dot');
+
+  function showSlide(i) {
+    banner.style.transform = `translateX(-${i * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[i].classList.add('active');
+  }
+
+  setInterval(() => {
+    index = (index + 1) % 2;
+    showSlide(index);
+  }, 4000);
+</script>
+<script src="cart.js"></script>
+
+</body>
+</html>

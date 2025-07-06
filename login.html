@@ -1,0 +1,240 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Register - Handicrafy Luxe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }body {
+    
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #dfefff, #bcd7ff);
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  background: white;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.form-content {
+  width: 60%;
+  padding: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  width: 200%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.form {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form h2 {
+  margin-bottom: 15px;
+}
+
+.input-container {
+  width: 80%;
+  position: relative;
+  margin: 8px 0;
+}
+
+.input-container i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form button {
+  width: 80%;
+  padding: 10px;
+  background: rgb(83, 131, 163);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.form button:hover {
+  background: rgb(83, 131, 163);
+}
+
+.form p {
+  margin-top: 20px;
+}
+
+.form a {
+  color: #444;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.switch-panel {
+  background: #e9f2ff;
+  color: #444;
+  padding: 40px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch-panel h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.switch-panel button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background:rgb(83, 131, 163);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.switch-panel button:hover {
+  background: bisque;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .switch-panel, .form-content {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+  </style>
+</head>
+<body><div class="container">
+  <header style="position: absolute; top: 20px; left: 20px;">
+  <a href="profile.html" style="text-decoration: none; color: #444; font-size: 18px;">
+    <i class="fas fa-arrow-left"></i> Back
+  </a>
+</header>
+
+  <div class="form-content">
+    <div class="slider" id="slider">
+      <!-- Register Form -->
+      <form id="register-form" class="form">
+        <h2>Register</h2>
+        <div class="input-container">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" placeholder="Username" required>
+        </div>
+        <div class="input-container">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" placeholder="Email" required>
+        </div>
+        <div class="input-container">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" placeholder="Password" required>
+        </div>
+        <button type="submit">Register</button>
+        <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+      </form><!-- Login Form -->
+  <form id="login-form" class="form">
+    <h2>Login</h2>
+    <div class="input-container">
+      <i class="fa-solid fa-user"></i>
+      <input type="text" placeholder="Username" required>
+    </div>
+    <div class="input-container">
+      <i class="fa-solid fa-lock"></i>
+      <input type="password" placeholder="Password" required>
+    </div>
+    <a href="#">Forgot Password?</a>
+    <button type="submit">Login</button>
+    <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+  </form>
+</div>
+
+  </div>  <div class="switch-panel">
+    <h2 id="switch-text">Welcome Back!</h2>
+    <p id="switch-subtext">Sign in to continue.</p>
+    <button id="switch-button">Login</button>
+  </div>
+</div><script>
+  const slider = document.getElementById('slider');
+  const showLogin = document.getElementById('show-login');
+  const showRegister = document.getElementById('show-register');
+  const switchButton = document.getElementById('switch-button');
+  const switchText = document.getElementById('switch-text');
+  const switchSubtext = document.getElementById('switch-subtext');
+
+  function slideToLogin() {
+    slider.style.transform = 'translateX(-50%)';
+    switchText.innerText = 'Welcome Back!';
+    switchSubtext.innerText = 'Sign in to continue.';
+    switchButton.innerText = 'Login';
+  }
+
+  function slideToRegister() {
+    slider.style.transform = 'translateX(0%)';
+    switchText.innerText = 'New Here?';
+    switchSubtext.innerText = 'Register to explore.';
+    switchButton.innerText = 'Register';
+  }
+
+  slideToLogin();
+
+  showRegister.addEventListener('click', (e) => {
+    e.preventDefault();
+    slideToRegister();
+  });
+
+  showLogin.addEventListener('click', (e) => {
+    e.preventDefault();
+    slideToLogin();
+  });
+
+  switchButton.addEventListener('click', () => {
+    if (switchButton.innerText === 'Register') {
+      slideToLogin();
+    } else {
+      slideToRegister();
+    }
+  });
+</script></body>
+</html>

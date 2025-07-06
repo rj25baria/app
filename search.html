@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search - Handicrafy Luxe</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+  <div class="logo">Search</div>
+  <div class="cart">
+    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+    <span class="cart-count" id="cartCount">1</span>
+  </div>
+</header>
+
+<div class="page">
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for products...">
+  </div>
+
+  <div class="product-grid" id="productList">
+    <div class="product-card">
+      <a href="products-spritual.html">
+        <img src="assets/product_4.jpg" alt="Handpainted Ganesh">
+        <div>
+          <h4>Handpainted Ganesh</h4>
+          <p class="price"><b>₹499</b></p>
+        </div>
+      </a>
+    </div>
+    <div class="product-card">
+      <a href="products-frames.html">
+        <img src="assets/wall.jpeg" alt="Wall Frame Art">
+        <div>
+          <h4>Wall Frame Art</h4>
+          <p class="price"><b>₹699</b></p>
+        </div>
+      </a>
+    </div>
+    <div class="product-card">
+      <a href="products-metal.html">
+        <img src="assets/motorcycle.jpeg" alt="Metal Art">
+        <div>
+          <h4>Metal Motorcycle Art</h4>
+          <p class="price"><b>₹799</b></p>
+        </div>
+      </a>
+    </div>
+    <div class="product-card">
+      <a href="products-toy.html">
+        <img src="assets/toy.jpeg" alt="Toy Art">
+        <div>
+          <h4>Toy Art</h4>
+          <p class="price"><b>₹599</b></p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer class="bottom-nav">
+  <a href="index.html"><i class="fas fa-home"></i>Home</a>
+  <a href="orders.html"><i class="fas fa-box"></i>Orders</a>
+  <a href="profile.html"><i class="fas fa-user"></i>Profile</a>
+</footer>
+
+<script>
+  const input = document.getElementById("searchInput");
+  const products = document.querySelectorAll(".product-card");
+
+  input.addEventListener("input", () => {
+    const value = input.value.toLowerCase();
+    products.forEach(card => {
+      const title = card.querySelector("h4").textContent.toLowerCase();
+      card.style.display = title.includes(value) ? "block" : "none";
+    });
+  });
+</script>
+
+</body>
+</html>
